@@ -38,3 +38,25 @@ const mensaje = `Linea
 Linea 2`;
 console.log(mensaje);
 ```
+
+#### Parametros por defecto
+
+```js
+function newUser(name, age, country) {
+    var name = name || 'Anderson';
+    var age = age || 19;
+    var country = country || 'VEN';
+
+    console.log(name, age, country);
+}
+
+newUser(); // Anderson 19 VEN
+newUser('Javier', 15, 'MX'); // Javier 15 MX
+
+function newAdmin(name = 'Anderson', age = 19, country = 'VEN') {
+    console.log({name, age, country});
+}
+
+newAdmin(); // { name: 'Anderson', age: 19, country: 'VEN' }
+newAdmin('Javier', 15, 'MX'); // { name: 'Javier', age: 15, country: 'MX' }
+```
