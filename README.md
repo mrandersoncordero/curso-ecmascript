@@ -60,3 +60,44 @@ function newAdmin(name = 'Anderson', age = 19, country = 'VEN') {
 newAdmin(); // { name: 'Anderson', age: 19, country: 'VEN' }
 newAdmin('Javier', 15, 'MX'); // { name: 'Javier', age: 15, country: 'MX' }
 ```
+
+#### Desestructuración
+
+La sintaxis de desestructuración es una expresión de JavaScript que permite desempacar valores de arreglos o propiedades de objetos en distintas variables.
+```js
+// arrays destructuring
+
+let fruits = ['Apple', 'Banana'];
+let [ a, b, c='Pera'] = fruits;
+console.log(a, b);
+console.log(a, b,c);
+
+// Object destructuring
+
+let user = {username: 'Anderson', age: 19};
+let { username, age: edad } = user;
+
+console.log(username, edad);
+console.log(username, user.age);
+```
+
+#### Spread operator(Operador de propagacion)
+La sintaxis spread ( ...) permite que un iterable, como una matriz o cadena, se expanda en lugares donde se esperan cero o más argumentos.
+
+```js
+let person = { name: 'Anderson', age: 19 };
+let country = 'ITA';
+
+let data = { id: 1, ...person , country };
+console.log(data); // { id: 1, name: 'Anderson', age: 19, country: 'ITA' }
+
+// rest
+
+// rest 
+
+function sum(num , ...values) {
+    console.log(values);
+    console.log(num + values[0]);
+    return num + values[0];
+}
+```
