@@ -118,3 +118,26 @@ function newUser(user, age, country,uId) {
 
 console.log(newUser('ander', 12, 'VEN', 1));
 ```
+
+### Promise 
+
+Permite asociar controladores con el valor eventual de éxito o el motivo de falla de una acción asíncrona. Esto permite que los métodos asíncronos devuelvan valores como los métodos síncronos: en lugar de devolver inmediatamente el valor final, el método asíncrono devuelve la promesa de proporcionar el valor en algún momento en el futuro.
+ - pendiente (pendiente) : estado inicial, ni cumplido ni rechazado.
+ - cumplida (cumplida) : lo que significa que la operación se completó con éxito.
+ - rechazada (rechazada) : lo que significa que la operación falló.
+
+```js
+const anotherFunction = () => {
+    return new Promise((resolve, reject) =>{
+        if (true) {
+            resolve('Hey!!');
+        } else {
+            reject('Upss!');
+        }
+    });
+}
+
+anotherFunction()
+    .then(response => console.log(response))
+    .catch(error => console.log(error));
+```
