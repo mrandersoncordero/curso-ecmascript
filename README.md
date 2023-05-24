@@ -101,3 +101,20 @@ function sum(num , ...values) {
     return num + values[0];
 }
 ```
+
+### Object Literals 
+
+Un objeto literal es una lista de cero o más pares de nombres de propiedades y valores asociados de un objeto, entre llaves ( {}).
+
+```js
+function newUser(user, age, country,uId) {
+    return {
+        user,
+        age,
+        country,
+        id: uId
+    }
+}
+
+console.log(newUser('ander', 12, 'VEN', 1));
+```
