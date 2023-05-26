@@ -14,5 +14,6 @@
     "desarrollo"
   ],
   "author": "Anderson Cordero <acorderofigueroa7@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module"
 }

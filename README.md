@@ -141,3 +141,27 @@ anotherFunction()
     .then(response => console.log(response))
     .catch(error => console.log(error));
 ```
+
+### Module
+
+Importancacion de funciones o clases de un archivo a otro.
+```js
+// modules.js
+const hello = () => {
+    console.log('Hello!');
+};
+
+export default hello;
+```
+y lo importamos asi
+```js
+import hello from "./module.js";
+
+hello();
+```
+tambien debemos configurar en el package.json
+```json
+  "type": "module"
+```
+debajo de licencia o author
+
