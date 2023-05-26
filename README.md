@@ -165,3 +165,25 @@ tambien debemos configurar en el package.json
 ```
 debajo de licencia o author
 
+### Generator
+
+Los generadores son funciones especiales que pueden pausar su ejecución, luego volver al punto donde se quedaron, recordando su scope y seguir retornando valores.
+
+#### Sintaxis
+La sintaxis de los generadores comprende lo siguiente:
+
+ - La palabra reservada function* (con el asterisco al final).
+ - La palabra reservada yield que hace referencia al valor retornado cada vez que se invoque, recordando el valor anterior.
+ - Crear una variable a partir de la función generadora.
+ - El método next devuelve un objeto que contiene una propiedad value con cada valor de yield; y otra propiedad done con el valor true o false si el generador ha terminado.
+```js
+function* iterate(array) {
+    for (let value of array) {
+        yield value;
+    }
+}
+
+const it = iterate(['Anderson', 'Javier', 'Ana', 'Maria', 'Kimy']);
+console.log(it.next().value); // Anderson
+console.log(it.next().value); // Javier
+```
