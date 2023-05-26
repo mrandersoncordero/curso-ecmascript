@@ -102,7 +102,7 @@ function sum(num , ...values) {
 }
 ```
 
-### Object Literals 
+#### Object Literals 
 
 Un objeto literal es una lista de cero o más pares de nombres de propiedades y valores asociados de un objeto, entre llaves ( {}).
 
@@ -119,7 +119,7 @@ function newUser(user, age, country,uId) {
 console.log(newUser('ander', 12, 'VEN', 1));
 ```
 
-### Promise 
+#### Promise 
 
 Permite asociar controladores con el valor eventual de éxito o el motivo de falla de una acción asíncrona. Esto permite que los métodos asíncronos devuelvan valores como los métodos síncronos: en lugar de devolver inmediatamente el valor final, el método asíncrono devuelve la promesa de proporcionar el valor en algún momento en el futuro.
  - pendiente (pendiente) : estado inicial, ni cumplido ni rechazado.
@@ -142,7 +142,7 @@ anotherFunction()
     .catch(error => console.log(error));
 ```
 
-### Module
+#### Module
 
 Importancacion de funciones o clases de un archivo a otro.
 ```js
@@ -165,17 +165,18 @@ tambien debemos configurar en el package.json
 ```
 debajo de licencia o author
 
-### Generator
+#### Generator
 
 Los generadores son funciones especiales que pueden pausar su ejecución, luego volver al punto donde se quedaron, recordando su scope y seguir retornando valores.
 
-#### Sintaxis
+##### Sintaxis
 La sintaxis de los generadores comprende lo siguiente:
 
  - La palabra reservada function* (con el asterisco al final).
  - La palabra reservada yield que hace referencia al valor retornado cada vez que se invoque, recordando el valor anterior.
  - Crear una variable a partir de la función generadora.
  - El método next devuelve un objeto que contiene una propiedad value con cada valor de yield; y otra propiedad done con el valor true o false si el generador ha terminado.
+
 ```js
 function* iterate(array) {
     for (let value of array) {
@@ -188,7 +189,7 @@ console.log(it.next().value); // Anderson
 console.log(it.next().value); // Javier
 ```
 
-### Set add
+#### Set add
 Set es una nueva estructura de datos para almacenar elementos únicos, es decir, sin elementos repetidos.
 
 ```js
@@ -206,3 +207,43 @@ Para manipular estas estructuras de datos, existen los siguientes métodos:
  - has(value): retorna un booleano si existe o no el valor dentro del Set.
  - clear(value): elimina todos los valores del Set.
  - size: retorna la cantidad de elementos del Set.
+
+### ES7
+
+#### Operador de potenciacion
+El operador de potenciación (exponential operator) consiste en elevar una base a un exponente utilizando el doble asterisco (**).
+
+```js
+const potencia = 2**3
+
+console.log(potencia) // 8
+```
+
+#### Metodo includes
+El método includes determina si un array o string incluye un determinado elemento. Devuelve true o false, si existe o no respectivamente.
+
+**Este método recibe dos argumentos:**
+
+ - El elemento a comparar.
+ - El índice inicial desde donde comparar hasta el último elemento.
+
+```js
+//Utilizando strings
+const saludo = "Hola mundo"
+
+saludo.includes("Hola") // true
+saludo.includes("Mundo") // false
+saludo.includes(" ") // true
+saludo.includes("Hola", 1) // false
+saludo.includes("mundo", -5) // true
+
+// Utilizando arrays
+const frutas = ["manzana", "pera", "piña", "uva"]
+
+frutas.includes("manzana") // true
+frutas.includes("Pera") // false
+frutas.includes("sandía") // false
+frutas.includes("manzana", 1) // false
+frutas.includes("piña", -1) // false
+frutas[0].includes("man") // true
+```
