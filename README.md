@@ -274,3 +274,26 @@ const countries = {
 };
 console.log(Object.values(countries)); //[ 'Mexico', 'Colombia', 'CHILE', 'Peru' ]
 ```
+
+#### Async functions
+Es una manera de trabajar de una forma mas cómoda con promesas, la palabra reservada “async” quiere decir que una función siempre devolverá una promesa. Ahora la palabra reservada “await”, solamente existe dentro de una función “async”, que hace que JavaScript espere hasta que la función promesa responda para continuar con el código dentro de ésta función, pero sin pausar la ejecución del siguiente código.
+
+```js
+const fnAsync = () => {
+    return new Promise((resolve, reject) => {
+        (true)
+            ? setTimeout(() => resolve('Async!!'), 2000)
+            : reject(new Error('Error'));
+    });
+}
+
+const anotherFn = async () => {
+    const something = await fnAsync();
+    console.log(something);
+    console.log('Hello');
+}
+
+console.log('Before');
+anotherFn();
+console.log('After');
+```
