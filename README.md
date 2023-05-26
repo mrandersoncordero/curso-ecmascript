@@ -247,3 +247,30 @@ frutas.includes("manzana", 1) // false
 frutas.includes("piña", -1) // false
 frutas[0].includes("man") // true
 ```
+
+#### Object Entries
+Object.entries() devuelve un array con las entries en forma [propiedad, valor] del objeto enviado como argumento.
+
+```js
+const countries = { MX: 'Mexico', CO: 'Colombia', CL: 'CHILE', PE: 'Peru' };
+console.log(Object.entries(countries));
+// [
+//     [ 'MX', 'Mexico' ],
+//     [ 'CO', 'Colombia' ],
+//     [ 'CL', 'CHILE' ],
+//     [ 'PE', 'Peru' ]
+// ]
+```
+
+#### Object Values
+Object.values() devuelve un array con los valores de cada propiedad del objeto enviado como argumento.
+
+```js
+const countries = { 
+    MX: 'Mexico',
+    CO: 'Colombia', 
+    CL: 'CHILE', 
+    PE: 'Peru' 
+};
+console.log(Object.values(countries)); //[ 'Mexico', 'Colombia', 'CHILE', 'Peru' ]
+```
