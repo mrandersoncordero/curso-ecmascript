@@ -368,7 +368,7 @@ Permite adentrarnos a profundidad en un array indicando la profundidad.
 const array = [1,2,3,4,5, [5,6,7,8,9, [9,10,11,12]]];
 console.log(array.flat(3));
 ```
-
+### ES10
 #### flatMap
 
 permite mostrar los valores del arreglo y aplicar alguna logica
@@ -391,4 +391,23 @@ Pasar de un array de arrays a un objecto en javascript
 const entries = new Map([["name", "anderson"], ["age", "19"]]);
 console.log(entries);
 console.log(Object.fromEntries(entries));
+```
+
+### ES11
+
+#### Optional chaining
+
+Podemos revisar si un valor existe de este modo la aplicacion no se rompera
+```js
+const users = {
+    anderson: {
+        country: 'VEN'
+    },
+    ana: {
+        country: 'MX'
+    }
+}
+
+// console.log(users.anderson.country);
+console.log(users?.bebeloper?.country)
 ```
