@@ -359,3 +359,20 @@ async function arrayOfNames(array) {
 const name = arrayOfNames(['Anderson', 'Javier', 'nose']);
 console.log('after')
 ```
+
+#### function flap
+
+Permite adentrarnos a profundidad en un array indicando la profundidad.
+```js
+// flat
+const array = [1,2,3,4,5, [5,6,7,8,9, [9,10,11,12]]];
+console.log(array.flat(3));
+```
+
+#### flatMap
+
+permite mostrar los valores del arreglo y aplicar alguna logica
+```js
+const array2 = [1,2,3,4,5];
+console.log(array2.flatMap(v => [v,v *2]));
+```
