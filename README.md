@@ -411,3 +411,19 @@ const users = {
 // console.log(users.anderson.country);
 console.log(users?.bebeloper?.country)
 ```
+
+#### BigInt
+```js
+const aBiNumber = 1902909029232323n;
+const anotherBigNumber = BigInt(1902909029232323);
+console.log(aBiNumber);
+console.log(anotherBigNumber);
+```
+
+#### Nullish
+Sirve para validar si una variable es vacia y si es el caso colcocar un valor por defecto
+```js
+const anotherNumber = null;
+const validate = anotherNumber ?? 5
+console.log(validate);
+```
