@@ -376,3 +376,12 @@ permite mostrar los valores del arreglo y aplicar alguna logica
 const array2 = [1,2,3,4,5];
 console.log(array2.flatMap(v => [v,v *2]));
 ```
+
+#### trimStart y trimEnd
+Permiten eliminar espacios en blanco
+```js
+const hello = '       Hello World!     ';
+console.log(hello.trimStart());
+console.log(hello.trimEnd());
+```
+
