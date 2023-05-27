@@ -297,3 +297,65 @@ console.log('Before');
 anotherFn();
 console.log('After');
 ```
+
+### ES9
+
+#### Regex
+```js
+const regex = /(\d{4})-(\d{2})-(\d{2})/;
+const matchers = regex.exec('2022-02-20');
+console.table(matchers);
+```
+
+#### finally
+Agregar una ultima funcion al final o al culimnar un try catch 
+```js
+const anotherFunction = () => {
+    return new Promise((resolve, reject) =>{
+        if (true) {
+            resolve('Hey!!');
+        } else {
+            reject('Upss!');
+        }
+    });
+}
+
+anotherFunction()
+    .then(response => console.log(response))
+    .catch(error => console.log(error))
+    .finally(() => console.log('Finally'));
+```
+
+#### spread en objetos
+
+```js
+const user = { username: 'gndx', age: 34, country: 'CO'};
+const { username, ...values } = user;
+console.log(username);
+console.log(values);
+```
+
+#### uso de async en generator y ciclos for
+
+```js
+async function* anotherGenerator() {
+    yield await Promise.resolve(1);
+    yield await Promise.resolve(2);
+    yield await Promise.resolve(3);
+}
+
+const other = anotherGenerator();
+other.next().then(response => console.log(response.value));
+other.next().then(response => console.log(response.value));
+other.next().then(response => console.log(response.value));
+console.log('hello');
+
+async function arrayOfNames(array) {
+    for await (let value of array) {
+        console.log(value);
+    }
+}
+
+const name = arrayOfNames(['Anderson', 'Javier', 'nose']);
+console.log('after')
+```
