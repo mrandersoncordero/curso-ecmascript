@@ -385,3 +385,10 @@ console.log(hello.trimStart());
 console.log(hello.trimEnd());
 ```
 
+#### entries a la inversa
+Pasar de un array de arrays a un objecto en javascript
+```js
+const entries = new Map([["name", "anderson"], ["age", "19"]]);
+console.log(entries);
+console.log(Object.fromEntries(entries));
+```
