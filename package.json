@@ -15,5 +15,8 @@
   ],
   "author": "Anderson Cordero <acorderofigueroa7@gmail.com>",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "node-fetch": "^3.3.1"
+  }
 }
