@@ -427,3 +427,37 @@ const anotherNumber = null;
 const validate = anotherNumber ?? 5
 console.log(validate);
 ```
+
+#### Promise.allsettled
+El Promise.allSettled()método estático toma un iterable de promesas como entrada y devuelve un solo Promise. Esta promesa devuelta se cumple cuando se liquidan todas las promesas de entrada (incluso cuando se pasa un iterable vacío), con una matriz de objetos que describen el resultado de cada promesa.
+
+```js
+const promise1 = new Promise((resolve,reject) => reject("Reject"));
+const promise2 = new Promise((resolve, reject) => resolve('resolve'));
+const promise3 = new Promise((resolve,reject) => resolve("resolve 2"));
+
+Promise.allSettled([promise1, promise2, promise3])
+    .then(response => console.log(response));
+```
+
+#### globalThis
+
+nos permite acceder a todos los elementos en el entorno que estemos
+
+```js
+console.log(window); // navegador
+console.log(global) // node
+console.log(self) // webworker
+console.log(globalThis);
+```
+
+#### matchAll
+El método matchAll de los strings devuelve un iterable con todas las coincidencias del string específico a partir de una expresión regular, colocada como argumento.
+
+string.matchAll(regex)
+
+```js
+El método matchAll de los strings devuelve un iterable con todas las coincidencias del string específico a partir de una expresión regular, colocada como argumento.
+
+string.matchAll(regex)
+```
